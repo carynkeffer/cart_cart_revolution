@@ -11,4 +11,11 @@ class Product
     @quantity = quantity
   end
 
+  def quantity
+    @quantity.to_i
+  end
+
+  def total_price
+    total_price = unit_price * quantity
+  end
 end
