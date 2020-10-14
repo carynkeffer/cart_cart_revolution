@@ -18,4 +18,16 @@ class Product
   def total_price
     total_price = unit_price * quantity
   end
+
+  def is_hoarded?
+    if @quantity.to_i >= 100
+      return true
+    else
+      return false
+    end
+  end
+
+  def hoard
+    @quantity.to_i + 100
+  end
 end
